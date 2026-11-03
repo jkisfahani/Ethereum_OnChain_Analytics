@@ -25,6 +25,31 @@ The goal is to extract meaningful insights from on-chain transaction activity, e
 - **AWS S3** — Public blockchain data source
 - **Git & GitHub** — Version control and project documentation
 
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/jkisfahani/Ethereum_OnChain_Analytics.git
+cd Ethereum_OnChain_Analytics
+```
+
+### 2. Install dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 3. Launch Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+Open the notebook you want to explore.
+
+**Note:** The AWS S3 analytics notebook uses DuckDB 1.4.5 for public Parquet data access. No AWS credentials are required for the public dataset.
+
 ## Data Source
 
 - **Provider:** AWS Public Blockchain Data
