@@ -1,0 +1,6 @@
+transaction_type,total_transactions,failed_transactions,transaction_share_pct,failure_rate_pct
+0,424874,4855,21.29,1.14
+1,495,5,0.02,1.01
+2,1528571,18925,76.58,1.24
+3,16498,0,0.83,0.0
+4,25668,627,1.29,2.44
