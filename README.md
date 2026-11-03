@@ -75,13 +75,17 @@ Initial analysis of Ethereum transactions for October 28, 2026:
 
 ## Visualizations
 
-The notebooks include visual analysis of:
+### 1. Hourly Transaction Failure Rate
+![Hourly Failure Rate](visualizations/01_hourly_failure_rate.png)
 
-- Hourly transaction activity.
-- Successful versus failed transactions.
-- Hourly transaction failure rates.
-- Failure rates by transaction type.
-- Average gas consumption for successful and failed transactions.
+### 2. Hourly Transaction Activity
+![Hourly Activity](visualizations/02_hourly_activity.png)
+
+### 3. Failure Rate by Transaction Type
+![Failure Rate by Type](visualizations/03_failure_rate_by_type.png)
+
+### 4. Average Gas Used
+![Gas Used](visualizations/04_gas_used.png)
 
 ## Current Status
 
