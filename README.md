@@ -115,7 +115,6 @@ Initial analysis of Ethereum transactions for October 28, 2026:
 ### 5. Daily Gas Price Distribution
 ![Daily Gas Price Distribution](visualizations/05_daily_gas_price_distribution.png)
 
-
 ## Current Status
 
 **Phase 1 — Initial Data Exploration and Analytics**
