@@ -13,6 +13,7 @@ The goal is to extract meaningful insights from on-chain transaction activity, e
 - Explore hourly transaction patterns.
 - Compare transaction types and failure rates.
 - Analyze gas consumption and estimated transaction fees.
+- Examine daily gas price distributions over multiple days.
 - Query large Parquet datasets directly from Amazon S3 using DuckDB.
 
 ## Technology Stack
@@ -46,7 +47,7 @@ python -m pip install -r requirements.txt
 jupyter notebook
 ```
 
-Open the notebook you want to explore.
+Open the notebook you want to explore from the `notebooks/` directory.
 
 **Note:** The AWS S3 analytics notebook uses DuckDB 1.4.5 for public Parquet data access. No AWS credentials are required for the public dataset.
 
@@ -64,16 +65,26 @@ Open the notebook you want to explore.
 Ethereum_OnChain_Analytics/
 │
 ├── notebooks/
-│   └── 01_Ethereum_Data_Exploration.ipynb
+│   ├── 00_Python_Environment_Test.ipynb
+│   ├── 01_Ethereum_Data_Exploration.ipynb
+│   ├── 02_Ethereum_AWS_S3_Analytics.ipynb
+│   └── 03_Ethereum_30_Day_Analytics_Consolidated.ipynb
 │
-├── 01_Python_Environment_Test.ipynb
-├── 02_Ethereum_AWS_S3_Analytics.ipynb
+├── CSVs/
+│   ├── ethereum_gas_analysis.csv
+│   ├── ethereum_hourly_analysis.csv
+│   ├── ethereum_transaction_types.csv
+│   └── ethereum_daily_gas_distribution.csv
 │
-├── ethereum_gas_analysis.csv
-├── ethereum_hourly_analysis.csv
-├── ethereum_transaction_types.csv
+├── visualizations/
+│   ├── 01_hourly_failure_rate.png
+│   ├── 02_hourly_activity.png
+│   ├── 03_failure_rate_by_type.png
+│   ├── 04_gas_used.png
+│   └── 05_daily_gas_price_distribution.png
 │
 ├── .gitignore
+├── requirements.txt
 └── README.md
 ```
 
@@ -101,18 +112,23 @@ Initial analysis of Ethereum transactions for October 28, 2026:
 ## Visualizations
 
 ### 1. Hourly Transaction Failure Rate
+
 ![Hourly Failure Rate](visualizations/01_hourly_failure_rate.png)
 
 ### 2. Hourly Transaction Activity
+
 ![Hourly Activity](visualizations/02_hourly_activity.png)
 
 ### 3. Failure Rate by Transaction Type
+
 ![Failure Rate by Type](visualizations/03_failure_rate_by_type.png)
 
 ### 4. Average Gas Used
+
 ![Gas Used](visualizations/04_gas_used.png)
 
 ### 5. Daily Gas Price Distribution
+
 ![Daily Gas Price Distribution](visualizations/05_daily_gas_price_distribution.png)
 
 ## Current Status
@@ -120,17 +136,22 @@ Initial analysis of Ethereum transactions for October 28, 2026:
 **Phase 1 — Initial Data Exploration and Analytics**
 
 Completed:
+
 - Python environment testing.
 - Public Ethereum S3 data access.
 - DuckDB SQL analysis.
-- Transaction and gas analysis.
+- One-day transaction and gas analysis.
+- 30-day gas price analysis.
 - CSV exports.
+- Five data visualizations.
+- Consolidation of analysis notebooks.
 - Initial GitHub publication.
 
 Future work:
-- Expand the analysis across multiple dates.
-- Build historical Ethereum activity datasets.
+
+- Expand historical Ethereum activity datasets.
 - Develop deeper on-chain analytics.
+- Investigate additional blockchain metrics.
 - Create a professional analytics dashboard.
 
 ## Author
